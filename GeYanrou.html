@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>个人简介</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+        }
+        .email {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+    </style>
+</head>
+<body>
+    <h1>葛嫣柔🥳</h1>
+    <p>出生年月：2003.11<br>星座：天蝎座<br>籍贯：浙江<br>政治面貌：团员<br>爱好：📚🎨🎵<br>Email：<span class="email">moc.liamg@tuoba_em_ksa</span><br>MBTI:ENFJ</p>
+    
+    <script>
+        // 简单的JavaScript脚本反转电子邮件地址
+        document.addEventListener('DOMContentLoaded', function() {
+            var emailElement = document.querySelector('.email');
+            var reversedEmail = emailElement.textContent.split('').reverse().join('');
+            emailElement.textContent = reversedEmail;
+        });
+    </script>
+</body>
+</html>
