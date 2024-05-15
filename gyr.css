@@ -1,0 +1,138 @@
+/* 在 CSS 文件顶部引入 Google Fonts 中的一个圆润可爱风格的字体 */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/* 设置背景，调整布局的基础样式 */
+.welcome-screen {
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    background: url('https://cdn.jsdelivr.net/gh/8CH6/picgo/img/b326679e0588e8c23fad5e9bec0e9b3.png') no-repeat center center/cover;
+}
+
+/* 为页面角落的单词设置样式 */
+.corner-word {
+    position: absolute;
+    color: #c8a2c8;
+    font-family: 'Fredoka One', cursive;
+    font-size: 6em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 为页面角落的单词设置样式，并更正定位 */
+#word-welcome { top: 5vh; left: 5vw; }
+#word-to { top: 5vh; right: 5vw; } /* TO 到右上角 */
+#word-my { bottom: 5vh; left: 5vw; } /* MY 到左下角 */
+#word-world { bottom: 5vh; right: 5vw; }
+
+/* 其它样式保持不变 */
+
+.center-bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 12%;
+    left: 0;
+    padding-bottom: 5%;
+}
+
+.center-bottom p {
+    font-family: 'Fredoka One', cursive;
+    color: #333333;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置 "ABOUT ME" 按钮的样式 */
+.center-bottom .get-started-btn {
+    font-family: 'Fredoka One', cursive;
+    background: #c8a2c8;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    /* 默认的光标样式 */
+    cursor: url('https://cdn.jsdelivr.net/gh/8CH6/picgo/img/normal-cursor.cur'), auto;
+}
+
+/* 鼠标悬停在 "ABOUT ME" 按钮上时光标变大 */
+.center-bottom .get-started-btn:hover {
+    cursor: url('https://cdn.jsdelivr.net/gh/8CH6/picgo/img/%E9%BC%A0%E6%A0%871.cur'), auto;
+}
+
+.circle-frame {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.circle-frame .text-content {
+    font-family: 'Fredoka One', cursive;
+    color: #550909;
+    font-size: 1.5em;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.circle-frame .sub-heading {
+    font-size: 1.5em;
+    color: #c8a2c8;
+    margin-top: 10px;
+}
+
+/* 设置整个页面默认的光标 */
+body {
+    cursor: url('https://cdn.jsdelivr.net/gh/8CH6/picgo/img/%E9%BC%A0%E6%A0%872.cur'), auto;
+}
+
+/* 为特定元素和按钮设置默认光标样式 */
+.special-element, button {
+    cursor: url('https://cdn.jsdelivr.net/gh/8CH6/picgo/img/%E9%BC%A0%E6%A0%872.cur'), pointer;
+}
+
+/* 当按钮被点击时，应用放大的光标 */
+button:active {
+    cursor: url('https://cdn.jsdelivr.net/gh/8CH6/picgo/img/%E9%BC%A0%E6%A0%871.cur'), pointer;
+}
+/* 假设中心点为 (16, 16) */
+.center-bottom .get-started-btn:hover {
+    cursor: url('https://cdn.jsdelivr.net/gh/8CH6/picgo/img/%E9%BC%A0%E6%A0%871.cur') 16 16, auto;
+  }
+/* gyr.css 的样式 (根据需要调整) */
+
+/* 定位到右上角 */
+.top-right {
+    position: absolute;
+    bottom: 5;
+    left: 10;
+}
+
+/* 定位到左下角 */
+.bottom-left {
+    position: absolute;
+   
+    top: 5;
+    right: 10;
+}
+
+/* 注意，根据您当前页面的具体样式，可能需要添加额外的样式如 margin 和 padding 以适应布局 */
+.progress-bar {
+    width: 40%; /* 控制进度条的外框长度 */
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    height: 20px; /* 控制进度条的高度 */
+}
+
+.progress {
+    background-color: #f36886;
+    height: 100%;
+    border-radius: 8px;
+    /* 已从此处移除宽度定义，以允许 HTML 中的内联样式动态控制宽度 */
+}

@@ -1,0 +1,149 @@
+/* 在 CSS 文件顶部引入 Google Fonts 中的 Baloo 2 字体，并选择较粗的字重 */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&display=swap');
+
+/* 引入 Font Awesome 图标库 */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+
+/* 主体和布局样式 */
+body {
+    font-family: 'Baloo 2', cursive;
+    background-color: #fcd1d1;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ }
+
+.content-wrapper {
+    position: relative;
+    background-color: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-height: 500px;
+    width: 70%;
+    margin: auto; 
+    
+}
+
+/* 创建类 .float-left 和 .float-right */
+.float-left {
+    float: left;
+    clear: left;
+    margin-right: 100px;
+    margin-top: 0px;
+}
+
+.float-right {
+    float: right;
+    clear: right;
+    margin-left: 100px;
+    margin-top: -85px;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #f36886;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #c95675;
+}
+
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.list-container div {
+    flex-basis: calc(50% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.list-container i {
+    font-size: 3rem;
+    color: #f36886;
+    margin-right: 15px;
+}
+
+
+/* 设置整个页面默认的光标 */
+body {
+    cursor: url('https://cdn.jsdelivr.net/gh/8CH6/picgo/img/%E9%BC%A0%E6%A0%872.cur'), auto;
+}
+
+/* 为特定元素和按钮设置默认光标样式 */
+.special-element, button {
+    cursor: url('https://cdn.jsdelivr.net/gh/8CH6/picgo/img/%E9%BC%A0%E6%A0%872.cur'), pointer;
+}
+/* 更新后的鼠标光标样式 */
+button, .back-btn, .my-photo, .special-element {
+    cursor: url('https://cdn.jsdelivr.net/gh/8CH6/picgo/img/%E9%BC%A0%E6%A0%872.cur'), pointer;
+}
+
+button:active, .back-btn:hover {
+    cursor: url('https://cdn.jsdelivr.net/gh/8CH6/picgo/img/%E9%BC%A0%E6%A0%871.cur'), pointer;
+}
+
+.top-right {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+
+.bottom-left {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    /* 初始化边距 */
+    margin: 0;
+    /* 自定义字体大小 */
+    font-size: 32px;
+    /* 自定义颜色 */
+    color: #333;
+    /* 如果你想调整文本的具体位置，可以使用 margin 或者 position 属性 */
+    position: relative;
+    top: -20px; /* 往上移动20px */
+    left: -95px; /* 往右移动20px */
+}
+/* 单独为 "About Me" 标题定义样式 */
+.about-me h3 {
+    /* 使用 margin 调整标题位置 */
+    margin-top: 10px; /* 如果你需要标题往下移动，则增加这个值 */
+    margin-bottom: 10px; /* 如果你需要增加标题和下面段落之间的空间，则增加这个值 */
+    /* 使用 padding 调整标题位置 */
+    padding-top: 10px; /* 如果你需要标题往下移动，则增加这个值 */
+    /* 如果需要进行左右移动，可以使用下面的属性 */
+    padding-left: 10px; /* 通过增加左内边距把标题向右移动 */
+    /* 也可以使用定位进行微调 */
+    position: relative;
+    left: 10px; /* 向右移动标题，负值会向左移动 */
+    /* 其他样式... */
+}

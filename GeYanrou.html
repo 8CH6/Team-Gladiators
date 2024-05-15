@@ -1,29 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>个人简介</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cute Personal Page</title>
+    <link rel="stylesheet" href="GeYanrou.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- 引入 Font Awesome 图标库 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
     <style>
-        body {
-            font-family: "Arial", sans-serif;
+        /* Existing styles... */
+
+        /* Float images to the left and right of the content */
+        .float-left {
+            float: left;
+            margin-right: 20px; /* Add space between the floated image and the content */
         }
-        .email {
-            unicode-bidi: bidi-override;
-            direction: rtl;
+
+        .float-right {
+            float: right;
+            margin-left: 20px; /* Add space between the floated image and the content */
+        }
+
+        /* This ensures that the content below the floats is cleared properly */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .progress-bar {
+        width: 100px; /* 控制进度条的长度 */
+        background-color: #e4e4e4;
+        border-radius: 10px;
+        height: 20px; /* 控制进度条的高度 */
+    }
+
+    .progress {
+        background-color: #f36886;
+        height: 100%;
+        border-radius: 8px;
+        width: 40px;
+    }
+    .custom-image {
+            position: absolute; /* 改变定位模式 */
+            top: 10%; /* 根据需求调整 */
+            right: 5%; /* 根据需求调整 */
+            width: 100px; /* 图片的宽度 */
+            height: auto; /* 保持图片的原始宽高比 */
         }
     </style>
 </head>
 <body>
-    <h1>葛嫣柔🥳</h1>
-    <p>出生年月：2003.11<br>星座：天蝎座<br>籍贯：浙江<br>政治面貌：团员<br>爱好：📚🎨🎵<br>Email：<span class="email">moc.liamg@tuoba_em_ksa</span><br>MBTI:ENFJ</p>
-    
-    <script>
-        // 简单的JavaScript脚本反转电子邮件地址
-        document.addEventListener('DOMContentLoaded', function() {
-            var emailElement = document.querySelector('.email');
-            var reversedEmail = emailElement.textContent.split('').reverse().join('');
-            emailElement.textContent = reversedEmail;
-        });
-    </script>
-</body>
+    <div class="content-wrapper clearfix">  <!-- Add clearfix class here -->
+        <!-- Move back button and images here, float them around the content -->
+        <a href="javascript:history.back()" class="back-btn"><i class="icon-left-open-big"></i> BACK</a>
+        <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/1a5c47684fac661985d5437e5d6fb38.jpg" alt="Description of Image 1" class="float-left" width="160" />
+             
+
+        <h1>Welcome to My Page!</h1>
+        <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/7e7a6d731eae1a137a59deb09edac55.jpg" alt="Description of Image 2" class="float-right" width="180"  />
+
+     
+
+        <!-- Rest of content -->
+        <h2>Major: Art & Technology</h2>
+        <div class="about-me">
+            <h3>About Me</h3>
+            <p>I am a dedicated student of Art & Technology with a passion for blending creativity with tech solutions. Balancing a keen aesthetic sense with technical proficiency, I strive to bring innovative designs to life. When I'm not immersed in my studies, you will find me exploring various forms of art, from digital compositions to immersive installations.</p>
+        </div>
+       <div class="skills">
+    <h3>Skills</h3>
+    <div class="list-container">
+        <div>
+            <i class="fa fa-paint-brush"></i> Adobe Illustrator
+            <div class="progress-bar">
+                <div class="progress" style="width: 70px;"></div>
+            </div>
+        </div>
+        <div>
+            <i class="fa fa-camera-retro"></i> Photoshop
+            <div class="progress-bar">
+                <div class="progress" style="width: 75px;"></div>
+            </div>
+        </div>
+        <div>
+            <i class="fa fa-cube"></i> Cinema 4D
+            <div class="progress-bar">
+                <div class="progress" style="width: 85%;"></div>
+            </div>
+        </div>
+        <div>
+            <i class="fa fa-magic"></i> Adobe After Effects
+            <div class="progress-bar">
+                <div class="progress" style="width: 90%;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="interests">
+            <h3>Interests</h3>
+            <div class="list-container">
+                <div>
+                    <i class="fa fa-music"></i> Listening to Music
+                    <div class="progress-bar">
+                        <div class="progress" ></div>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa fa-globe-americas"></i> Traveling
+                    <div class="progress-bar">
+                        <div class="progress" ></div>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa fa-book-reader"></i> Reading Books
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa fa-hiking"></i> Hiking
+                    <div class="progress-bar">
+                        <div class="progress" ></div>
+                    </div>
+                </div>
+                <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/12.png"style="width: 200px; height: auto; position: absolute; top: 0px; left: -195px;">
+                <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/123.png"style="width: 500px; height: auto; position: absolute; top:240px; left: -340px;">
+                <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/23.png"style="width: 570px; height: auto; position: absolute; top:450px; left: -360px;">
+                <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/345.png"style="width: 180px; height: auto; position: absolute; top:530px; right: -180px;">
+                <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/45.png"style="width: 180px; height: auto; position: absolute; top:270px; right: -180px;">
+                <img src="https://cdn.jsdelivr.net/gh/8CH6/picgo/img/66.png"style="width: 170px; height: auto; position: absolute; top:0px; right: -180px;">
+
+
+            
+            
+            
+            </div>
+        </div>
+    </body>
 </html>
