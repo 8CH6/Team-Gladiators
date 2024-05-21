@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="GeYanrou.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arduino Project: Controlling LED Lights with a Switch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arduino Project: Controlling LED Lights with a Switch</h1>
+    <p>In this tutorial, we will learn how to control a simple circuit using an Arduino Nano to alternate the illumination of two LED lights with the control of a switch. This project is suitable for those who want to quickly understand basic electronics knowledge and get started with Arduino programming.
+    </p>
+    <p>Here are the hardware requirements for this project:</p>
+    <ul>
+        <li>Arduino Nano: A compact, sufficiently featured small Arduino board suitable for beginners and advanced enthusiasts.</li>
+        <li>Wires: Used to connect the Arduino board to electronic components, providing power and signal lines for LEDs and switches.</li>
+        <li>LED Lights: Two sources of light for displaying the circuit status, utilizing different colors of LEDs to distinguish between on and off states.</li>
+        <li>Resistors: To limit the current passing through the LEDs, ensuring safe operation.</li>
+    </ul>
+    <p>Our objective is to control two LED lights with the input of a physical standard switch. When the switch is turned on (connecting the circuit), one LED light is illuminated, and when the switch is turned off (disconnecting the circuit), the other LED light is illuminated. Thus, we can create a basic binary signal indicator with a simple switch action.</p>
+
+    <h2>Arduino Code</h2>
+    <p>The code below, written by Group 6, is for a project initiated on May 20, 2024, and is designed to control the on-off state of two LED lights by reading digital input, simulating a simple binary signal indicator:</p>
+    <pre>
+        <code>// Arduino Wiring Diagram
+        // 5V --- VCC
+        // GND --- GND
+        // 13 --- LED2
+        // 12 --- LED1
+
+        // Purpose
+        // This project aims to control the on-off state of two LED lights by reading the digital input,
+        // to simulate a simple binary signal indicator.
+
+        // Source
+        // The code was written by Group 6.
+
+        // Project Start Time
+        // The project was initiated on May 20, 2024 (Built on 5.20)
+
+        // Define LED1 connected to pin 12 of the Arduino
+        const int LED1 = 12;
+
+        // Define LED2 connected to pin 13 of the Arduino
+        const int LED2 = 13;
+
+        // Define a variable 'val' to store the value read from a digital input
+        int val = 0; 
+
+        // The setup function runs once when the Arduino board starts up
+        void setup() { 
+            // Set pin LED1 as an output mode
+            pinMode(LED1, OUTPUT);
+            
+            // Set pin LED2 as an output mode
+            pinMode(LED2, OUTPUT);
+            
+            // Set pin
+            pinMode(7, INPUT);
+        }
+
+        // The loop function runs repeatedly after setup()
+        void loop() {
+            // Read the input value from pin 7 and store it in 'val'
+            val = digitalRead(7);
+            
+            // If the value read from pin 7 is LOW, do the following
+            if (val == LOW) {
+                // Turn on LED1 (set it to HIGH voltage)
+                digitalWrite(LED1, HIGH);
+                
+                // Turn off LED2 (set it to LOW voltage)
+                digitalWrite(LED2, LOW);
+            } else {
+                // Turn on LED2 (set it to HIGH voltage)
+                digitalWrite(LED2, HIGH);
+                
+                // Turn off LED1 (set it to LOW voltage)
+                digitalWrite(LED1, LOW);
+            }
+            
+            // Pause for 10 milliseconds before the next loop
+            delay(10);
+        }</code>
+    </pre>
+</body>
+</html>
